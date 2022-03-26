@@ -19,3 +19,11 @@ THEN I find a concise, descriptive title (Completed)
 
 Student Notes:
 Cleaned up the original HTML and CSS files that were provided. Updated both the HTML and CSS files so that there would be less ambiguity about what elements are being modified by the style sheet. Also added more descriptive names to the html elements and grouped similar elements in the stylesheet so that it is obvious to other developers as to what section is being modified by the style sheet. 
+
+Link to Repository: https://github.com/dcast0607/Webpage-Code-Refactor
+Link to Github Hosted Page: https://dcast0607.github.io/Webpage-Code-Refactor/
+
+Screenshots:
+![Alt text](./assets/images/Horisen%20Screenshot%201.jpg?raw=true "Horiseon Site Screenshot 1")
+![Alt text](./assets/images/Horiseon%20Screenshot%202.jpg?raw=true "Horiseon Site Screenshot 2")
+
