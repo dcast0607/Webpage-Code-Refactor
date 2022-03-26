@@ -4,76 +4,137 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!--Revision 1 - Fix website name to display name of company.-->
+    <!--Fix website name to display name of company.-->
     <title>Horiseon</title>
 </head>
 
 <body>
+
+    <!-- Header elements of the webpage -->
     <div class="header">
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
-            <ul>
-                <li>
+        <!-- Added h1 id to define company name. -->
+        <h1 id="company-name">
+            Hori<span class="seo-text">seo</span>n
+        </h1>
+        <!-- Added class name to differentiate from other standard "<div>" -->
+        <div class="header-options">
+            <!--Defined ordered list using ID tag. Did this in case other ul lists
+            need to be added that have different styling properties.-->
+            <ul id="unordered-list-header-options">
+                <!--Added "header-list-items" class to modify the list items on the header.-->
+                <li class="header-list-items">
                     <a href="#search-engine-optimization">Search Engine Optimization</a>
                 </li>
-                <li>
+                <li class="header-list-items">
                     <a href="#online-reputation-management">Online Reputation Management</a>
                 </li>
-                <li>
+                <li class="header-list-items">
                     <a href="#social-media-marketing">Social Media Marketing</a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="hero"></div>
-    <div class="content">
-        <div class="search-engine-optimization">
-            <img src="Webpage-Code-Refactor/assets/images/search-engine-optimization.jpg" class="float-left" />
-            <h2>Search Engine Optimization</h2>
+    
+    
+    <!-- Homepage Banner Elements -->
+    <div>
+        <!--Moved image source to html file to keep it with the others. Also added alt text and created ID 
+        that is specific to the homepage-banner. -->
+        <img id="homepage-banner" src="./assets/images/digital-marketing-meeting.jpg" alt="Homepage banner. Digital marketing meeting.">
+    </div>
+    <!------------------------------------------->
+
+    <!-- Modifying name of class to be more descriptive. -->
+    <div class="main-content-sections">
+        <!-- Search Engine Optimization Section-->
+        <!-- Modifying the class name of all the sections so that I can apply the same styling properties to all of them. Keeping
+        the section "id" tag in case we need to make modifications individually for each section. -->
+        <div id="search-engine-optimization" class="individual-content-section">
+            <!-- Added alt text and changed the "float-left" class name to "image-left-justification" to be more 
+            descriptive about what the class will be doing.-->
+            <img src="./assets/images/search-engine-optimization.jpg" alt="Search Engine Optimization Sample Image" class="image-left-justification image-height-restriction" />
+            <!-- We want all H2 section titles to be the same format, creating a class so that we
+            can modify the h2 section title properties all at once. Will remove unnecessary styling
+            properties from styling sheet as well.-->
+            <h2 class="content-section-header">Search Engine Optimization</h2>
             <p>
                 The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
             </p>
         </div>
-        <div id="online-reputation-management" class="online-reputation-management">
-            <img src="./assets/images/online-reputation-management.jpg" class="float-right" />
-            <h2>Online Reputation Management</h2>
+        <!------------------------------------------->
+        <!-- Online Reputation Management Section-->
+        <!-- Modifying the class name of all the sections so that I can apply the same styling properties to all of them. Keeping
+        the section "id" tag in case we need to make modifications individually for each section. -->
+        <div id="online-reputation-management" class="individual-content-section">
+            <!-- Added alt text and changed the "float-right" class name to "image-right-justification" to be more 
+            descriptive about what the class will be doing.-->
+            <img src="./assets/images/online-reputation-management.jpg" alt="Online Reputation Management Sample Image" class="image-right-justification image-height-restriction" />
+            <!-- We want all H2 section titles to be the same format, creating a class so that we
+            can modify the h2 section title properties all at once. Will remove unnecessary styling
+            properties from styling sheet as well.-->
+            <h2 class="content-section-header">Online Reputation Management</h2>
             <p>
                 The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
             </p>
         </div>
-        <div id="social-media-marketing" class="social-media-marketing">
-            <img src="./assets/images/social-media-marketing.jpg" class="float-left" />
-            <h2>Social Media Marketing</h2>
+        <!------------------------------------------->
+        <!-- Social Media Marketing Section-->
+        <!-- Modifying the class name of all the sections so that I can apply the same styling properties to all of them. Keeping
+        the section "id" tag in case we need to make modifications individually for each section. -->
+        <div id="social-media-marketing" class="individual-content-section">
+            <!-- Added alt text and changed the "float-left" class name to "image-left-justification" to be more 
+            descriptive about what the class will be doing.-->
+            <img src="./assets/images/social-media-marketing.jpg" alt="Social Media Marketing Sample Image" class="image-left-justification image-height-restriction" />
+            <!-- We want all H2 section titles to be the same format, creating a class so that we
+            can modify the h2 section title properties all at once. Will remove unnecessary styling
+            properties from styling sheet as well.-->
+            <h2 class="content-section-header">Social Media Marketing</h2>
             <p>
                 Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
             </p>
         </div>
+        <!------------------------------------------->
     </div>
-    <div class="benefits">
-        <div class="benefit-lead">
-            <h3>Lead Generation</h3>
-            <img src="./assets/images/lead-generation.png" />
+    <!------------------------------------------->
+
+    <!-- Benefits Section Elements -->
+    <!-- Adding more descriptive class title.-->
+    <div class="benefits-section">
+        <!-- Adding element ID in case hypothetical client wants to make changes to the sub sections at the individual level. 
+            Adding class id so that I can modify the different sub sections all at once. --> 
+        <div id="benefit-lead" class="benefits-sub-section-properties">
+            <!-- Adding an "h3" class called "benefits-section-sub-section-heading" so that we can modify all of the sub-section
+            headings with the same properties.-->
+            <h3 class="benefits-section-sub-section-heading">Lead Generation</h3>
+            <!-- Adding image class to modify all of the images in the benefits sub sections. Also added alt text. -->
+            <img src="./assets/images/lead-generation.png" alt="Lead Generation Sample Image" class="benefits-sub-section-images" />
             <p>
                 Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
             </p>
         </div>
-        <div class="benefit-brand">
-            <h3>Brand Awareness</h3>
-            <img src="./assets/images/brand-awareness.png" />
+        <!-- Adding element ID in case hypothetical client wants to make changes to the sub sections at the individual level. 
+            Adding class id so that I can modify the different sub sections all at once. --> 
+        <div id="benefit-brand" class="benefits-sub-section-properties">
+            <h3 class="benefits-section-sub-section-heading">Brand Awareness</h3>
+            <!-- Adding image class to modify all of the images in the benefits sub sections. Also added alt text. -->
+            <img src="./assets/images/brand-awareness.png" alt="Brand Awareness Sample Image" class="benefits-sub-section-images" />
             <p>
                 Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.
             </p>
         </div>
-        <div class="benefit-cost">
-            <h3>Cost Management</h3>
-            <img src="./assets/images/cost-management.png" />
+        <!-- Adding element ID in case hypothetical client wants to make changes to the sub sections at the individual level. 
+            Adding class id so that I can modify the different sub sections all at once. --> 
+        <div id="benefit-cost" class="benefits-sub-section-properties">
+            <h3 class="benefits-section-sub-section-heading">Cost Management</h3>
+            <!-- Adding image class to modify all of the images in the benefits sub sections. Also added alt text. -->
+            <img src="./assets/images/cost-management.png" alt="Cost Management Sample Image" class="benefits-sub-section-images" />
             <p>
                 As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.
             </p>
         </div>
     </div>
     <div class="footer">
-        <h2>Made with ❤️️ by Horiseon</h2>
+        <h2 id="footer-signature">Made with ❤️️ by Horiseon</h2>
         <p>
             &copy; 2019 Horiseon Social Solution Services, Inc.
         </p>

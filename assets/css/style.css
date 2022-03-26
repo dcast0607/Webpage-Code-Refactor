@@ -1,11 +1,67 @@
+
+/*
+UNIVERSAL SELECTORS - Targeting Entire Page
+--------------------------------------------------------------------------------
+*/
+
+/*
+Leaving as is as they are necessary to get rid of the margins and padding on the page
+as well as setting box-sizing to border box.
+*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/*
+--------------------------------------------------------------------------------
+/*
+
+/*
+BODY SELECTORS - Targeting Body of Page
+--------------------------------------------------------------------------------
+*/
+
+/*
+Leaving as is, needed as there are margins and padding in between elements. User will
+be able to see background color of the page. 
+*/
 body {
     background-color: #d9dcd6;
+}
+
+/*
+Leaving as is. This is modifying the anchor tags so that they do not show any text
+decoration and it is setting the font-color of the anchor tags to the color specified below.
+*/
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*
+--------------------------------------------------------------------------------
+/*
+
+/*
+HEADER SELECTORS - Targeting Header Elements (Lumping together for better visibility
+and legibility.
+--------------------------------------------------------------------------------
+*/
+
+/*
+Modified the h1 tag to include an id of "company-name" so that it is more descriptive
+about what this header is doing. 
+*/
+#company-name {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/* Modified class name to be more descriptive. */
+.seo-text {
+    color: #d9dcd6;
 }
 
 .header {
@@ -15,67 +71,132 @@ body {
     color: #ffffff;
 }
 
-.header h1 {
-    display: inline-block;
-    font-size: 48px;
-}
-
-.header h1 .seo {
-    color: #d9dcd6;
-}
-
-.header div {
-    padding-top: 15px;
+/* Consolidated some previous CSS selectors so that they are more descriptive about
+what is being modified and so that there is less ambiguity if we were to add additional
+header options, ul, or li elements. 
+*/
+.header-options {
+    padding-top: 20px;
     margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-.header div ul {
+#unordered-list-header-options {
     list-style-type: none;
 }
 
-.header div ul li {
+.header-list-items {
     display: inline-block;
     margin-left: 25px;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
+/*
+--------------------------------------------------------------------------------
+*/
 
-p {
-    font-size: 16px;
-}
+/*
+MAIN WEBSITE BANNER SECTION
+--------------------------------------------------------------------------------
+*/
 
-.hero {
-    height: 800px;
+/*
+Removed the image source from the stylesheet and move it to the html sheet. Better
+for organization in my opinion. Also switched height to "auto" to better adjust with
+page width. 
+*/
+ #homepage-banner {
+    height: auto;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
+/*
+--------------------------------------------------------------------------------
+*/
+
+/*
+MAIN CONTENT PROPERTIES - Sections on the left of the page.
+--------------------------------------------------------------------------------
+*/
+
+/* Leaving as is, modifying the font size of the "p" elements. Setting 
+font to 16 px.
+*/
+p {
+    font-size: 16px;
 }
 
-.float-right {
-    float: right;
-    margin-left: 25px;
+/*
+Like in the header section, I created additional classes that would modify multiple
+elements in the "main content" section of the webpage. This allowed me to consolidate
+quite a bit of CSS selectors that were being used repetitively. It also allowed me to 
+clean up the naming structure which in turn makes it more obvious what HTML elements are 
+being modified by the CSS code below. 
+*/
+.individual-content-section{
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
 }
 
-.content {
+.main-content-sections {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-.benefits {
+.image-left-justification {
+    float: left;
+    margin-right: 25px;
+}
+
+.image-right-justification {
+    float: right;
+    margin-left: 25px;
+}
+
+/*
+Added a "content-section-header" class to be able to modify the h2 headers
+that are used to title the content sections. 
+*/
+.content-section-header{
+    margin-bottom: 20px;
+    font-size: 36px; 
+}
+
+/*
+Added a "image-height-restriction" class that allows me to modify the max height
+for all of the images in the "main content section."
+*/
+.image-height-restriction {
+    max-height: 200px;
+}
+/*
+--------------------------------------------------------------------------------
+*/
+
+/*
+BENEFITS SECTION - Section to the right hand side of the page.
+--------------------------------------------------------------------------------
+*/
+
+/*
+Similar to the header section and main content section, I am consolidating much of the 
+previous styling properties into more descriptive classes that accomplish the same styling 
+changes without creating repetitive styling attributes. 
+*/
+.benefits-section-sub-section-heading{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.benefits-section {
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -86,107 +207,25 @@ p {
     background-color: #2589bd;
 }
 
-.benefit-lead {
+.benefits-sub-section-properties {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+.benefits-sub-section-images {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
+/*
+FOOTER Section
+--------------------------------------------------------------------------------
+*/
 
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
+/*
+Cleaned up the naming structure a bit here. 
+*/
 
 .footer {
     padding: 30px;
@@ -195,6 +234,12 @@ p {
     text-align: center;
 }
 
-.footer h2 {
+/* I want to set the footer signature specifically to 20px. Creating in h2 ID 
+for this element in case we have other h2 elements. */
+#footer-signature {
     font-size: 20px;
 }
+/*
+--------------------------------------------------------------------------------
+*/
+
