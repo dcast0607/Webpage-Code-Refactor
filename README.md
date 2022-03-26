@@ -23,7 +23,7 @@ Cleaned up the original HTML and CSS files that were provided. Updated both the 
 Link to Repository: https://github.com/dcast0607/Webpage-Code-Refactor
 Link to Github Hosted Page: https://dcast0607.github.io/Webpage-Code-Refactor/
 
-Screenshots:
+Screenshots (had to take two screenshots, page wasn't large enough for 1 screenshot):
 ![Alt text](./assets/images/Horisen%20Screenshot%201.jpg?raw=true "Horiseon Site Screenshot 1")
 ![Alt text](./assets/images/Horiseon%20Screenshot%202.jpg?raw=true "Horiseon Site Screenshot 2")
 
